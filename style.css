@@ -1,0 +1,129 @@
+/* Reset básico para tirar margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #141414; /* Cor de fundo estilo Netflix */
+    color: white;
+}
+
+header {
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+.logo {
+    color: #e50914; /* Vermelho característico */
+    font-size: 2rem;
+}
+
+.logo span {
+    color: white;
+}
+
+/* Estilos das Categorias e Carrossel */
+.categoria {
+    margin: 30px 0 30px 40px;
+}
+
+.categoria h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.lista-videos {
+    display: flex;
+    overflow-x: auto; /* Permite rolar para o lado */
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+/* Esconde a barra de rolagem mas mantém a função */
+.lista-videos::-webkit-scrollbar {
+    display: none; 
+}
+
+.card-video {
+    min-width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Animação suave ao passar o mouse */
+}
+
+.card-video:hover {
+    transform: scale(1.05); /* Dá um zoom no vídeo ao passar o mouse */
+}
+
+.card-video img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilos da Ficha Técnica (Modal) */
+.modal-escondido {
+    display: none;
+}
+
+#modal-ficha {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: #181818;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#fechar-modal {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#area-video-imagem {
+    width: 100%;
+    aspect-ratio: 16/9; /* Proporção de vídeo do YouTube */
+    background-color: black;
+}
+
+#area-video-imagem img, #area-video-imagem iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-info {
+    padding: 20px;
+}
+
+.modal-info h2 { margin-bottom: 10px; }
+.modal-info p { color: #ccc; margin-bottom: 20px; line-height: 1.5; }
+
+#btn-play {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn-play:hover { background-color: #ddd; }
