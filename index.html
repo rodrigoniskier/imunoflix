@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImunoFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Imuno<span>Flix</span></h1>
+    </header>
+
+    <main id="catalogo">
+        </main>
+
+    <div id="modal-ficha" class="modal-escondido">
+        <div class="modal-conteudo">
+            <button id="fechar-modal">X</button>
+            <div id="area-video-imagem">
+                <img id="modal-imagem" src="" alt="Capa do vídeo">
+                <iframe id="modal-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>
+            </div>
+            <div class="modal-info">
+                <h2 id="modal-titulo">Título do Vídeo</h2>
+                <p id="modal-descricao">Descrição do vídeo vai aqui.</p>
+                <button id="btn-play">Assistir Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
